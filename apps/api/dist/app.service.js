@@ -17,9 +17,9 @@ let AppService = exports.AppService = class AppService {
         this.configService = configService;
     }
     getHello() {
-        const dbConfig = this.configService.get('server');
+        const dbConfig = this.configService.get('JWT_SECRET');
         console.log(dbConfig);
-        return 'Hello World!';
+        return 'ok';
     }
 };
 exports.AppService = AppService = __decorate([

@@ -1,15 +1,15 @@
 import { Injectable } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
-import { AppConfig, ServerConfig } from './config';
+import { EnvironmentVariables } from './config';
 
 @Injectable()
 export class AppService {
-  constructor(private configService: ConfigService<AppConfig>) {}
+  constructor(private configService: ConfigService<EnvironmentVariables>) {}
 
   getHello(): string {
-    const dbConfig = this.configService.get<ServerConfig>('server');
+    const dbConfig = this.configService.get('JWT_SECRET');
     console.log(dbConfig);
 
-    return 'Hello World!';
+    return 'ok';
   }
 }

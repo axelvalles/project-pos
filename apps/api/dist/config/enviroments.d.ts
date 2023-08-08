@@ -7,6 +7,5 @@ export declare const enviroments: {
 export declare const enviromentSchema: Joi.ObjectSchema<any>;
 export interface EnvironmentVariables {
     PORT: number;
-    API_KEY: string;
     JWT_SECRET: string;
 }

@@ -1,4 +1,3 @@
-export * from './app.config';
-export * from './database.config';
+export { default as configuration } from './configuration';
 export * from './enviroments';
-export * from './server.config';
+export * from './index';

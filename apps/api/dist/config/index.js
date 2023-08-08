@@ -14,8 +14,9 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
     for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-__exportStar(require("./app.config"), exports);
-__exportStar(require("./database.config"), exports);
+exports.configuration = void 0;
+var configuration_1 = require("./configuration");
+Object.defineProperty(exports, "configuration", { enumerable: true, get: function () { return configuration_1.default; } });
 __exportStar(require("./enviroments"), exports);
-__exportStar(require("./server.config"), exports);
+__exportStar(require("./index"), exports);
 //# sourceMappingURL=index.js.map

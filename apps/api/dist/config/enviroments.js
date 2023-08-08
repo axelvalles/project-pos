@@ -8,7 +8,6 @@ exports.enviroments = {
     prod: '.env.prod',
 };
 exports.enviromentSchema = Joi.object({
-    API_KEY: Joi.string().required(),
     PORT: Joi.number().required(),
     JWT_SECRET: Joi.string().required(),
 });
