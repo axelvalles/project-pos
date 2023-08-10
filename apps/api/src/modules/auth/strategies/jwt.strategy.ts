@@ -16,7 +16,7 @@ export class JwtStategy extends PassportStrategy(Strategy, 'jwt') {
       // IGNORA LA EXPIRACION
       ignoreExpiration: false,
       // LA LLAVE SECRETA CON LA QUE FIRMAMOS EL TOKEN AL HACER LOGIN
-      secretOrKey: configService.get('SERVER_JWT_SECRET'),
+      secretOrKey: configService.get('SERVER_JWT_ACCESS_SECRET'),
     });
   }
 

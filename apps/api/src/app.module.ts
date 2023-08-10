@@ -6,7 +6,7 @@ import { configuration, enviromentSchema, enviroments } from './config';
 import { DatabaseModule } from './database/database.module';
 import { AuthModule } from './modules/auth/auth.module';
 import { ProductModule } from './modules/product/product.module';
-import { CategoryModule } from './modules/category/category.module';
+import { CategoriesModule } from './modules/categories/categories.module';
 import { UsersModule } from './modules/users/users.module';
 import { CommonModule } from './modules/common/common.module';
 
@@ -21,7 +21,7 @@ import { CommonModule } from './modules/common/common.module';
     DatabaseModule,
     AuthModule,
     ProductModule,
-    CategoryModule,
+    CategoriesModule,
     UsersModule,
     CommonModule,
   ],

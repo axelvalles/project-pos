@@ -16,11 +16,13 @@ export class UserPresenter {
   isActive: boolean;
 
   constructor(user: User) {
-    this.id = user.id;
-    this.firstName = user.firstName;
-    this.lastName = user.lastName;
-    this.phone = user.phone;
-    this.email = user.email;
-    this.isActive = user.isActive;
+    if (user) {
+      this.id = user.id;
+      this.firstName = user.firstName;
+      this.lastName = user.lastName;
+      this.phone = user.phone;
+      this.email = user.email;
+      this.isActive = user.isActive;
+    }
   }
 }

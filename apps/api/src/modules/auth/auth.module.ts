@@ -9,6 +9,7 @@ import { UsersModule } from '../users/users.module';
 import { PassportModule } from '@nestjs/passport';
 import { JwtStategy } from './strategies/jwt.strategy';
 import { LocalStategy } from './strategies/local.strategy';
+import { RefreshTokenStrategy } from './strategies/refresh-token.strategy';
 
 @Module({
   imports: [
@@ -20,7 +21,7 @@ import { LocalStategy } from './strategies/local.strategy';
       useFactory: async (configService: ConfigService<AppConfig>) => {
         return {
           global: true,
-          secret: configService.get('SERVER_JWT_SECRET'),
+          secret: configService.get('SERVER_JWT_ACCESS_SECRET'),
           signOptions: {
             expiresIn: '1d',
           },
@@ -28,7 +29,7 @@ import { LocalStategy } from './strategies/local.strategy';
       },
     }),
   ],
-  providers: [AuthService, LocalStategy, JwtStategy],
+  providers: [AuthService, LocalStategy, JwtStategy, RefreshTokenStrategy],
   controllers: [AuthController],
 })
 export class AuthModule {}
